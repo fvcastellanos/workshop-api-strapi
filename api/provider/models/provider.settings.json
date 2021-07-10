@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "providers",
+  "info": {
+    "name": "Provider",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 50,
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150,
+      "minLength": 1
+    },
+    "contact": {
+      "type": "string",
+      "maxLength": 150
+    },
+    "taxId": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30,
+      "default": "CF"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "provider_invoices": {
+      "via": "provider",
+      "collection": "provider-invoice"
+    }
+  }
+}

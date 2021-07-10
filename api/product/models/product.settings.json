@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "minimalAmount": {
+      "type": "decimal",
+      "required": true,
+      "default": 1
+    },
+    "salePrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 50
+    }
+  }
+}

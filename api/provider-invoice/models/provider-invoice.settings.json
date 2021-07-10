@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provider_invoices",
+  "info": {
+    "name": "Provider Invoice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "suffix": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "number": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "provider": {
+      "via": "provider_invoices",
+      "model": "provider"
+    }
+  }
+}
