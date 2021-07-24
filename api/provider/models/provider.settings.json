@@ -42,6 +42,11 @@
     "provider_invoices": {
       "via": "provider",
       "collection": "provider-invoice"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }

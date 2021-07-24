@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "product",
+  "collectionName": "operation_types",
   "info": {
-    "name": "product",
-    "description": ""
+    "name": "Operation Type"
   },
   "options": {
     "increments": true,
@@ -15,26 +14,17 @@
     "name": {
       "type": "string",
       "required": true,
+      "unique": true,
       "maxLength": 150
     },
     "description": {
-      "type": "text",
+      "type": "string",
       "maxLength": 300
     },
-    "minimalAmount": {
-      "type": "decimal",
-      "required": true,
-      "default": 1
-    },
-    "salePrice": {
-      "type": "decimal",
+    "inbound": {
+      "type": "boolean",
+      "default": true,
       "required": true
-    },
-    "code": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "maxLength": 50
     },
     "active": {
       "type": "boolean",
