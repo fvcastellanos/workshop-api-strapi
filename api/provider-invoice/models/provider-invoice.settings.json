@@ -36,6 +36,21 @@
     "provider": {
       "via": "provider_invoices",
       "model": "provider"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "created": {
+      "type": "date"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
